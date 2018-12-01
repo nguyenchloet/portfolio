@@ -1,102 +1,3 @@
-*, *:before, *:after {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  font-family: Verdana, sans-serif;
-}
-
-html {
-	background-image: url('/Users/ctn/Desktop/Site/projects/CTNsite/resources/background-images/somethingpeachx2.jpg');
-	width: 1000px;
-}
-
-body {
-	background-color: none;
-	max-width: 1200px;
-	margin: 0 auto;
-}
-
-/* Title Nav */
-
-.container {
-
-}
-
-.header {
-  display: flex;
-	width: 100%;
-	height: 180px;
-	z-index: 9;
-  border-radius: 12px;
-  margin: 15px 15px;
-  padding-left: 10px;
-}
-
-.header h1 {
-  width: 45%;
-  padding-top: 40px;
-}
-
-.header a {
-  display: inline;
-  text-decoration: none;
-  font-size: 55px;
-  word-spacing: .5em;
-  font-family: 'Homemade Apple', cursive;
-  color: #eee;
-  text-shadow: 0 0 10px black;
-}
-
-.header #firstHeader {
-  padding-left: 20px;
-  font-size: 75px;
-}
-
-.header #secondHeader {
-  font-size: 60px;
-  margin-top: 60px;
-}
-
-.nav {
-  display: inline-flex;
-  width: 40%;
-  padding-top: 80px;
-  padding-right: 25px;
-  margin-left: 20px;
-  justify-content: space-between;
-}
-
-.nav p {
-  width: 120px;
-  height: 40px;
-  display: inline-flex;
-  font-weight: bold;
-  align-content: space-between;
-}
-
-.nav a {
-  display: inline-flex;
-  list-style: none;
-  width: inherit;
-  font-size: 18px;
-  text-decoration: none;
-  color: #eee;
-  text-shadow: 0 0 10px black;
-  align-items: center;
-  justify-content: center;
-  border-left: solid;
-  border-color: silver;
-}
-
-.nav #contact {
-  border-right: solid;
-  border-color: silver;
-}
-
-.nav a:hover {
-  color: black;
-}
-
 /* Body */
 
 .body {
@@ -112,18 +13,15 @@ body {
   box-shadow: 0 0 20px #eee;
   max-height: 1000px;
 }
-
 .mainBody .leftAside {
   width: 35%;
   text-align: center;
 }
-
 .leftAside h2 {
   font-family: 'Homemade Apple', sans-serif;
   color: gray;
-  padding: 0 45px;
+  padding: 0 40px;
 }
-
 .mainBody img {
   position: inherit;
   padding: 6px 6px;
@@ -133,17 +31,17 @@ body {
   border-style: solid;
   border-color: silver;
 }
-
 .mainBody .rightAside {
   display: flex;
-  max-width: 65%;
+  max-width: 70%;
   margin-left: 20px;
+  padding-right: 20px;
 }
-
 .rightAside .iconContainer {
   display: flex;
   flex-wrap: wrap;
-  padding-left: 60px;
+  padding-left: 40px;
+  justify-content: space-between;
 }
 .rightAside .oval {
 	height: 150px;
@@ -151,9 +49,58 @@ body {
 	border-radius: 50%;
 	position: relative;
   margin: auto 50px;
+  padding: 0 20px;
 	z-index: -1;
   box-shadow: 0 0 30px black;
 }
+
+.ribbon {
+  width: 220px;
+  height: 50px;
+  position: absolute;
+  font-size: 18px;
+  background: coral;
+  box-shadow: 0px 2px 15px -2px #000;
+  color: #fff;
+  text-align: center;
+  text-shadow: 1px 1px 1px #000;
+  top: 120px;
+  left: -35px;
+}
+
+.ribbon h3 {
+  height: 20px;
+  align-content: center;
+  margin-top: -2px;
+}
+
+.ribbon::after {
+  content: '';
+  box-sizing: border-box;
+  position: absolute;
+  right: 0;
+  top: 100%;
+  border-width: 4px 10px;
+  border-style: solid;
+  border-color: #fff;
+  padding: 0;
+  width: 100%;
+  z-index: -1;
+}
+
+.ribbon::before {
+  content: '';
+  position: absolute;
+  border: 25px solid coral;
+  border-left-color: transparent;
+  border-right-color: transparent;
+  left: -40px;
+  top: 12%;
+  width: 140%;
+  z-index: -1;
+}
+
+/* Cake Icon */
 
 .rightAside .oval.one {
   background: skyblue;
@@ -237,6 +184,8 @@ body {
   z-index: -1;
 }
 
+/* Bread Icon */
+
 .rightAside .oval.two {
   background: blue;
 }
@@ -251,8 +200,7 @@ body {
   background-image: linear-gradient(to bottom, #ffce72, #ffa821);
   z-index: 2;
   overflow: hidden;
-  top: 30px;
-  left: 16px;
+  bottom: -30px;
 }
 
 .bread__strip {
@@ -280,9 +228,96 @@ body {
   transform: rotate(16deg);
 }
 
+/* Cupcake */
+
 .rightAside .oval.three {
   background: purple;
+  display: flex;
 }
+
+.dessert_wrapper {
+  width: 60%;
+  max-width: 100px;
+  min-width: 50px;
+  min-height: 100px;
+  height: 100px;
+  margin: 1rem auto 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-style: solid;
+}
+
+.frosting__wrapper {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  z-index: 10;
+  max-height: 100px;
+  border-style: solid;
+}
+
+.cupcake-base {
+	height: 40px;
+	width: 55px;
+	position: relative;
+	background-color: #ffa821;
+	background-image: linear-gradient(to right, #8B4513 1px, transparent 1px);
+	background-size: 10px 10px;
+  -webkit-transform: rotateY(85deg);
+  transform: rotateY(-25deg);
+  top: 50px;
+  left: 25px;
+	border-left: 2px solid #8B4513;
+	border-right: 2px solid #8B4513;
+	border-radius: 16%;
+  z-index: 1;
+}
+
+.frosting-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.frosting-bottom {
+	width: 70px;
+	height: 25px;
+	top: 40px;
+	left: 35px;
+	position: absolute;
+	z-index: 2;
+	border: 2px solid #8B4513;
+	border-radius: 20px;
+	background-color: #CD853F;
+}
+
+.frosting-middle {
+	width: 50px;
+	height: 20px;
+	top: 22px;
+	left: 45px;
+	position: absolute;
+	z-index: 2;
+  border: 2px solid #8B4513;
+	border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+	background-color: #CD853F;
+}
+
+.frosting-top {
+	width: 20px;
+	height: 20px;
+	top: 10px;
+	left: 60px;
+	position: absolute;
+	z-index: 2;
+	border: 2px solid #8B4513;
+	border-radius: 20px;
+	background-color: #CD853F;
+}
+
+/* Lollipop */
 
 .rightAside .oval.four {
   background: pink;
@@ -293,6 +328,7 @@ body {
   align-items: center;
   justify-content: center;
   flex-direction: row;
+  bottom: 40px;
 }
 
 .lollipop {
@@ -404,45 +440,4 @@ body {
   margin-left: 60px;
   z-index: 2;
   transform: rotatez(125deg);
-}
-
-/* Footer */
-
-.footer {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  box-shadow: 0 0 20px white;
-  margin-top: 20px;
-  vertical-align: bottom;
-}
-
-.footerNav {
-  display: inline-flex;
-  align-content: center;
-  justify-content: center;
-}
-
-.footerNav p {
-  display: inline-flex;
-  padding: 0 20px;
-}
-
-.footerNav a {
-  text-decoration: none;
-  font-size: 12px;
-  color: black;
-}
-
-.footerNav a:hover {
-  color: gray;
-}
-
-.footer .cta {
-  color: gray;
-  text-shadow: 0 0 10px silver;
-  align-self: center;
-  padding-bottom: 10px;
-  font-size: 12px;
 }
